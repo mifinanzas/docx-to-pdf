@@ -3,7 +3,7 @@ This is a Flask-based microservice that converts DOCX files to PDF format using 
 
 ## Installation
 ```
-git clone https://github.com/beladevo/libreoffice-docx-to-pdf.git
+git clone https://github.com/mifinanzas/docx-to-pdf.git
 pip install -r requirements.txt
 python run.py
 ```
@@ -14,8 +14,8 @@ python run.py
 
 ## Docker
 ```
-docker build -t beladevos/docx-pdf-converter-libreoffice
-docker run -p 5000:5000 beladevos/docx-pdf-converter-libreoffice
+docker build -t desarrollomf/docx-pdf-converter
+docker run -p 5000:5000 desarrollomf/docx-pdf-converter
 ```
 
 ## Lisence

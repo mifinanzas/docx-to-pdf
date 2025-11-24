@@ -30,7 +30,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: beladevos/docx-pdf-converter-libreoffice:lts
+        tags: desarrollomf/docx-pdf-converter:lts
 
     - name: Log out of Docker Hub
       run: docker logout

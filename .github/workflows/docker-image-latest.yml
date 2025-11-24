@@ -39,8 +39,8 @@ jobs:
         context: .
         push: true
         tags: |
-          beladevos/docx-pdf-converter-libreoffice:latest
-          beladevos/docx-pdf-converter-libreoffice:1.0.${{ github.run_number }}
+          desarrollomf/docx-pdf-converter:latest
+          desarrollomf/docx-pdf-converter:1.0.${{ github.run_number }}
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache
 

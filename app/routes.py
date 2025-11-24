@@ -1,4 +1,6 @@
 from flask import Blueprint, request, jsonify, send_file
+
+from app.auth import require_api_key
 from .utils import convert_docx_to_pdf, download_file
 import tempfile
 import os
@@ -11,6 +13,7 @@ convert_bp = Blueprint("convert", __name__)
 logger = logging.getLogger(__name__)
 
 @convert_bp.route("/convert", methods=["POST"])
+@require_api_key
 def convert():
     temp_input_path = None
     temp_output_path = None
@@ -67,7 +70,7 @@ def convert():
         logger.info(f"Conversion successful, sending file: {temp_output_path}")
 
         return send_file(
-            temp_output_path, as_attachment=True, download_name="converted.pdf"
+            temp_output_path, as_attachment=True, download_name="output.pdf"
         )
 
     except Exception as e:
